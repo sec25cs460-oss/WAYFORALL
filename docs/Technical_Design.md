@@ -39,3 +39,23 @@ The platform aims to improve independent mobility by helping users identify acce
 - Regional language voice navigation.
 - Real-time accessibility updates.
 - Integration with public transport information.
+
+
+
+## System Architecture Diagram
+
+The following diagram illustrates the proposed architecture of WAYFORALL.
+
+```mermaid
+flowchart TD
+    A[User] --> B[WAYFORALL React Frontend]
+    B --> C[Python Flask Backend]
+    C --> D[Route Planning Module]
+    C --> E[Accessibility Reporting Module]
+    C --> F[Firebase Database]
+    D --> G[OpenStreetMap]
+    E --> F
+    F --> C
+    C --> B
+    B --> H[Accessible Route Results]
+```
